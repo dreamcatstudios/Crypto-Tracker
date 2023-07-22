@@ -1,0 +1,10 @@
+input["checkbox"] {
+  display: block;
+  width: 100%;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
