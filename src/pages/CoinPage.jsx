@@ -5,6 +5,7 @@ import { CryptoState } from "../CryptoContext";
 import axios from "axios";
 import { SingleCoin } from "../config/api";
 import CoinChart from "../components/CoinChart";
+import { Oval } from "react-loader-spinner";
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -52,6 +53,7 @@ const CoinPage = () => {
             <div className="text-center">
               <p className=" font-semibold">{shortDescription}</p>
             </div>
+            <CoinChart coin={coin} id={id} />
             <div className="text-left">
               <h1 className="text-2xl font-bold">
                 Rank: {coin.market_cap_rank}
@@ -63,10 +65,16 @@ const CoinPage = () => {
                 Market Cap: {symbol} {coin.market_data.market_cap.inr}
               </h1>
             </div>
-            <CoinChart coin={coin} id={id} />
           </>
         ) : (
-          <div>Loading coin data...</div>
+          <div className="flex justify-center items-center h-64">
+            <Oval
+              color="#21BF73"
+              height={100}
+              width={100}
+              ariaLabel="loading"
+            />
+          </div>
         )}
       </div>
     </>
