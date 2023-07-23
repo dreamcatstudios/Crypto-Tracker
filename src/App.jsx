@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/Homepage";
 import CoinPage from "./pages/CoinPage";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
