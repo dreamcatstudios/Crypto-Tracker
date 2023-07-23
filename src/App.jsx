@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Homepage from "./pages/homepage";
 import CoinPage from "./pages/CoinPage";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   // return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/coins/:id" element={<CoinPage />} />
           </Routes>
+          <Footer />
         </div>
       </BrowserRouter>
     </>

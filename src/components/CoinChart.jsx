@@ -57,7 +57,7 @@ const CoinChart = ({ coin, id }) => {
   // Calculate the date range for the last 7 days
   const currentDate = new Date();
   const lastSevenDays = new Date(
-    currentDate.getTime() - 7 * 24 * 60 * 60 * 1000
+    currentDate.getTime() - 30 * 24 * 60 * 60 * 1000
   );
 
   return (
@@ -67,7 +67,7 @@ const CoinChart = ({ coin, id }) => {
         width={1000}
         height={600}
         data={formattedData}
-        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
       >
         <XAxis dataKey="date" domain={[lastSevenDays, currentDate]} />{" "}
         {/* Set the initial domain */}
