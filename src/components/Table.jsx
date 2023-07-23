@@ -66,7 +66,7 @@ const Table = () => {
             <thead>
               <tr>
                 <th className="px-6 py-3 bg-[#21BF73] text-white">Coin</th>
-                <th className="px-6 py-3 bg-[#21BF73] text-white">{`${symbol}Price`}</th>
+                <th className="px-6 py-3 bg-[#21BF73] text-white">{`Price (${symbol})`}</th>
                 <th className="px-6 py-3 bg-[#21BF73] text-white">
                   24h Change
                 </th>
