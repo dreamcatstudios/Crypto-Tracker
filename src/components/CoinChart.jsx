@@ -61,8 +61,8 @@ const CoinChart = ({ coin, id }) => {
   );
 
   return (
-    <div>
-      <h2>{coin.name} Price Chart</h2>
+    <div className="bg-white">
+      <h2 className="text-center font-medium">{coin.name} Price Chart</h2>
       <LineChart
         width={1000}
         height={600}

@@ -9,7 +9,6 @@ const Homepage = () => {
     <>
       <Carousel />
       <Table />
-      <CoinPage />
     </>
   );
 };

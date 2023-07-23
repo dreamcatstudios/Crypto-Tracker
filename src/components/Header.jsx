@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <nav className="bg-[#0D1282] p-4 shadow-lg">
+    <nav className="bg-[#21BF73] p-4 shadow-lg">
       <div className="flex item-center justify-between">
         <a className="text-white text-xl font-semibold">Crypto Tracker</a>
         <select

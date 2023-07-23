@@ -31,15 +31,15 @@ const Table = () => {
           <h1 className="text-center text-3xl font-bold p-5">
             Crypto Currency By Market Cap 💸💰
           </h1>
-          <table className="w-full border-black">
+          <table className="w-full border-black bg-white">
             <thead>
               <tr>
-                <th className="px-6 py-3 bg-yellow-500 text-white">Coin</th>
-                <th className="px-6 py-3 bg-yellow-500 text-white">Price</th>
-                <th className="px-6 py-3 bg-yellow-500 text-white">
+                <th className="px-6 py-3 bg-[#21BF73] text-white">Coin</th>
+                <th className="px-6 py-3 bg-[#21BF73] text-white">Price</th>
+                <th className="px-6 py-3 bg-[#21BF73] text-white">
                   24h Change
                 </th>
-                <th className="px-6 py-3 bg-yellow-500 text-white">
+                <th className="px-6 py-3 bg-[#21BF73] text-white">
                   Market Cap
                 </th>
               </tr>

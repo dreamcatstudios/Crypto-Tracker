@@ -20,21 +20,29 @@ const Carousel = () => {
   console.log(trending);
   return (
     <>
-      <div className="p-5">
+      <div className="p-5 bg-white">
         <h1 className="text-3xl font-bold text-center">
           Top Trending Coins 🔥
         </h1>
       </div>
       <div className="flex flex-wrap p-5 justify-center space-y-5 space-x-5 items-center">
         {trending.map((item) => (
-          <div className="w-36 h-36 rounded-lg border-black border-2 inline-block p-5 shadow-lg text-center">
-            <h1 className="text-black">{item.id}</h1>
-            <div>
+          <div className="w-44 h-44 rounded-lg border-black border-2 inline-block p-5 shadow-lg text-center space-y-2 bg-[#F7F7F7]">
+            <h1 className="text-black">{item.name}</h1>
+            <div className="flex items-center justify-center">
               {" "}
               <img src={item.image} width={50} />
             </div>
 
-            <p className="text-white"> Price</p>
+            {item.price_change_percentage_24h < 0 ? (
+              <p className="text-red-500">
+                {item.price_change_percentage_24h + "%"}{" "}
+              </p>
+            ) : (
+              <p className="text-green-500">
+                {item.price_change_percentage_24h + "%"}
+              </p>
+            )}
           </div>
         ))}
       </div>
