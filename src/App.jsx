@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="bg-white h-screen">
+        <div className="bg-[#EEEDED] h-screen">
           <Header />
           <Routes>
             {" "}
