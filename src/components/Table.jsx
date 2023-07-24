@@ -62,48 +62,46 @@ const Table = () => {
             />
           </div>
 
-          <table className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] table-auto">
-            <thead>
-              <tr>
-                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
-                  Coin
-                </th>
-                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">{`Price (${symbol})`}</th>
-                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
-                  24h Change
-                </th>
-                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
-                  Market Cap
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {coins.map((coin) => (
-                <tr key={coin.id}>
-                  <td className="lg:px-6 lg:py-3 border">
-                    <Link
-                      to={`/coins/${coin.id}`}
-                      className="flex items-center"
-                    >
-                      <img
-                        src={coin.image}
-                        alt={coin.name}
-                        className="w-8 h-8 mr-2"
-                      />
-                      {coin.name}
-                    </Link>
-                  </td>
-                  <td className="lg:px-6 lg:py-3 border">
-                    {coin.current_price}
-                  </td>
-                  <td className="lg:px-6 lg:py-3 border">
-                    {coin.price_change_percentage_24h}
-                  </td>
-                  <td className="lg:px-6 lg:py-3 border">{coin.market_cap}</td>
+          <div className="overflow-x-auto">
+            <table className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] table-auto">
+              <thead>
+                <tr>
+                  <th className="px-6 py-3 bg-[#21BF73] text-white">Coin</th>
+                  <th className="px-6 py-3 bg-[#21BF73] text-white">{`Price (${symbol})`}</th>
+                  <th className="px-6 py-3 bg-[#21BF73] text-white">
+                    24h Change
+                  </th>
+                  <th className="px-6 py-3 bg-[#21BF73] text-white">
+                    Market Cap
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {coins.map((coin) => (
+                  <tr key={coin.id}>
+                    <td className="px-6 py-3 border">
+                      <Link
+                        to={`/coins/${coin.id}`}
+                        className="flex items-center"
+                      >
+                        <img
+                          src={coin.image}
+                          alt={coin.name}
+                          className="w-8 h-8 mr-2"
+                        />
+                        {coin.name}
+                      </Link>
+                    </td>
+                    <td className="px-6 py-3 border">{coin.current_price}</td>
+                    <td className="px-6 py-3 border">
+                      {coin.price_change_percentage_24h}
+                    </td>
+                    <td className="px-6 py-3 border">{coin.market_cap}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </>
       )}
     </>
