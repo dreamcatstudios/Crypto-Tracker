@@ -48,7 +48,7 @@ const Table = () => {
       ) : (
         <>
           <div className="mt-10">
-            <h1 className="text-center lg:text-3xl font-bold p-5">
+            <h1 className="text-center text-3xl font-bold p-5">
               Crypto Currency By Market Cap 💸💰
             </h1>
           </div>
@@ -65,12 +65,14 @@ const Table = () => {
           <table className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] table-auto">
             <thead>
               <tr>
-                <th className="px-6 py-3 bg-[#21BF73] text-white">Coin</th>
-                <th className="px-6 py-3 bg-[#21BF73] text-white">{`Price (${symbol})`}</th>
-                <th className="px-6 py-3 bg-[#21BF73] text-white">
+                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
+                  Coin
+                </th>
+                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">{`Price (${symbol})`}</th>
+                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
                   24h Change
                 </th>
-                <th className="px-6 py-3 bg-[#21BF73] text-white">
+                <th className="lg:px-6 lg:py-3 bg-[#21BF73] text-white">
                   Market Cap
                 </th>
               </tr>
@@ -78,7 +80,7 @@ const Table = () => {
             <tbody>
               {coins.map((coin) => (
                 <tr key={coin.id}>
-                  <td className="px-6 py-3 border">
+                  <td className="lg:px-6 lg:py-3 border">
                     <Link
                       to={`/coins/${coin.id}`}
                       className="flex items-center"
@@ -91,11 +93,13 @@ const Table = () => {
                       {coin.name}
                     </Link>
                   </td>
-                  <td className="px-6 py-3 border">{coin.current_price}</td>
-                  <td className="px-6 py-3 border">
+                  <td className="lg:px-6 lg:py-3 border">
+                    {coin.current_price}
+                  </td>
+                  <td className="lg:px-6 lg:py-3 border">
                     {coin.price_change_percentage_24h}
                   </td>
-                  <td className="px-6 py-3 border">{coin.market_cap}</td>
+                  <td className="lg:px-6 lg:py-3 border">{coin.market_cap}</td>
                 </tr>
               ))}
             </tbody>
