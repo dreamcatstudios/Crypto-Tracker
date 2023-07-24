@@ -48,7 +48,7 @@ const Table = () => {
       ) : (
         <>
           <div className="mt-10">
-            <h1 className="text-center text-3xl font-bold p-5">
+            <h1 className="text-center lg:text-3xl font-bold p-5">
               Crypto Currency By Market Cap 💸💰
             </h1>
           </div>
@@ -62,7 +62,7 @@ const Table = () => {
             />
           </div>
 
-          <table className="w-full border-black bg-white">
+          <table className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] table-auto">
             <thead>
               <tr>
                 <th className="px-6 py-3 bg-[#21BF73] text-white">Coin</th>
