@@ -63,29 +63,31 @@ const CoinChart = ({ coin, id }) => {
   return (
     <div className="bg-white">
       <h2 className="text-center font-medium">{coin.name} Price Chart</h2>
-      <LineChart
-        width={1000}
-        height={600}
-        data={formattedData}
-        margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
-      >
-        <XAxis dataKey="date" domain={[lastSevenDays, currentDate]} />{" "}
-        {/* Set the initial domain */}
-        <YAxis dataKey="price" />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip
-          labelFormatter={(label) => new Date(label).toLocaleDateString()}
-        />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="price"
-          name="Price"
-          stroke="#4caf50"
-          dot={false}
-        />
-        <Brush dataKey="date" height={30} stroke="#8884d8" />
-      </LineChart>
+      <div className="overflow-x-auto">
+        <LineChart
+          width={1000}
+          height={600}
+          data={formattedData}
+          margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
+        >
+          <XAxis dataKey="date" domain={[lastSevenDays, currentDate]} />{" "}
+          {/* Set the initial domain */}
+          <YAxis dataKey="price" />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip
+            labelFormatter={(label) => new Date(label).toLocaleDateString()}
+          />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="price"
+            name="Price"
+            stroke="#4caf50"
+            dot={false}
+          />
+          <Brush dataKey="date" height={30} stroke="#8884d8" />
+        </LineChart>
+      </div>
     </div>
   );
 };
